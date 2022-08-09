@@ -19,7 +19,7 @@ rm build.tcl.sedbak
 # build hammerdb related tables
 ./download-hammerdb.sh "$HAMMERDB_VERSION"
 start_time=$(date +%s)
-(cd "HammerDB-$HAMMERDB_VERSION" && time ./hammerdbcli auto ../build.tcl | tee "../results/hammerdb_build_${BENCHNAME}.log")
+(cd "HammerDB-$HAMMERDB_VERSION" && time ./hammerdbcli auto ../build.tcl)
 end_time=$(date +%s)
 
 # Do three-decimal fixed arithmetic using only bash to calculate the number of
